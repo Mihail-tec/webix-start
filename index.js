@@ -23,15 +23,13 @@ webix.ready(function () {
         height: 850,
         type: "clean",
         width: 200,
-        css: { background: "#d6d2d2" },
         cols: [
           {
+            css: "colorBack",
             rows: [
               {
                 view: "list",
-                id: "mylist",
                 scroll: false,
-                css: { background: "#d6d2d2" },
                 data: [
                   { value: "Dashboard" },
                   { value: "Users" },
@@ -39,11 +37,11 @@ webix.ready(function () {
                   { value: "Location" },
                 ],
               },
-              { css: { background: "#d6d2d2" } },
               {
                 type: "clean",
                 view: "template",
-                template:'<span class="webix_icon wxi-check " > </span>Connected',
+                template:
+                  '<span class="webix_icon wxi-check " > </span>Connected',
                 css: "text_decor",
               },
             ],
@@ -57,7 +55,6 @@ webix.ready(function () {
           },
           {
             view: "form",
-            type: "section",
             elementsConfig: {
               labelWidth: 130,
             },
@@ -81,7 +78,7 @@ webix.ready(function () {
       {
         view: "template",
         css: "centerText",
-        height: 50,
+        autoheight: true,
         template:
           "The software is provided by <a href='https://ru.webix.com'>https://ru.webix.com/</a>. All right reserved (c)",
       },

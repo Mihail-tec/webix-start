@@ -1,16 +1,19 @@
-.text_decor  {
-    
-      color:green;
-      background:#d6d2d2;
-      text-decoration:none;
+.text_decor {
+  color: green;
+  background: #d6d2d2;
+  text-decoration: none;
+}
+
+.colorBack .webix_view {
+    background-color: #d6d2d2;
 }
 
 .webix_clean .webix_template {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .centerText {
-    text-align: center;
+  text-align: center;
 }
