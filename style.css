@@ -1,0 +1,16 @@
+.text_decor  {
+    
+      color:green;
+      background:#d6d2d2;
+      text-decoration:none;
+}
+
+.webix_clean .webix_template {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.centerText {
+    text-align: center;
+}
