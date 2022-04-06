@@ -4,8 +4,11 @@
   text-decoration: none;
 }
 
-.colorBack .webix_view {
+.colorBack .webix_view{
     background-color: #d6d2d2;
+}
+.webix_list_item{
+    border-color: transparent;
 }
 
 .webix_clean .webix_template {

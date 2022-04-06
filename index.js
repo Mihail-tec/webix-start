@@ -19,13 +19,11 @@ webix.ready(function () {
         ],
       },
       {
-        autoheight: true,
-        height: 850,
         type: "clean",
-        width: 200,
         cols: [
           {
             css: "colorBack",
+            width: 200,
             rows: [
               {
                 view: "list",
@@ -40,6 +38,7 @@ webix.ready(function () {
               {
                 type: "clean",
                 view: "template",
+                autoheight: true,
                 template:
                   '<span class="webix_icon wxi-check " > </span>Connected',
                 css: "text_decor",
@@ -71,6 +70,7 @@ webix.ready(function () {
                   { view: "button", value: "clear", css: "webix_secondary" },
                 ],
               },
+              {},
             ],
           },
         ],
