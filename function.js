@@ -1,9 +1,8 @@
 function save() {
-  var validate = $$("form").validate();
-  if (validate) {
-    var data = $$("form").getValues();
+  if ($$("form").validate()) {
+    const data = $$("form").getValues();
     $$("datatable").add(data);
-    webix.message("success added");
+    webix.message("Successfully added");
   }
 }
 

@@ -1,4 +1,5 @@
 webix.ready(function () {
+  webix.ui(popupConfig)
   webix.ui({
     rows: [
       {
@@ -52,7 +53,6 @@ webix.ready(function () {
             id: "datatable",
             autoConfig: true,
             data: small_film_set,
-            template: "#title# #year# #rating# #votes#",
           },
           {
             view: "form",
@@ -110,11 +110,7 @@ webix.ready(function () {
               year: function (value) {
                 return value >= 1970 && value <= new Date().getFullYear();
               },
-              rating: function (value) {
-                if (webix.rules.isNumber(value)) {
-                  return true;
-                }
-              },
+              rating: webix.rules.isNumber,
               votes: function (value) {
                 return value <= 100000 && value > 0;
               },

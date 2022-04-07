@@ -1,5 +1,4 @@
-webix.ready(function () {
-  webix.ui({
+const popupConfig = {
     view: "popup",
     id: "my_pop",
     width: 200,
@@ -14,9 +13,8 @@ webix.ready(function () {
       select: true,
       on: {
         onItemClick: function (id) {
-          webix.message("you touch " + id);
+          webix.message("Click on " + id);
         },
       },
     },
-  });
-});
+}
