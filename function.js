@@ -1,12 +1,17 @@
-function save() {
+const save = () => {
+  const form = $$("form");
+  const datatable = $$("datatable");
+  const item_data = form.getValues();
   if ($$("form").validate()) {
-    const data = $$("form").getValues();
-    $$("datatable").add(data);
-    webix.message("Successfully added");
+    if (item_data.id) {
+      datatable.updateItem(item_data.id, item_data);
+    } else {
+      datatable.add(item_data);
+    }
   }
 }
 
-function clear() {
+const clear = () => {
   webix
     .confirm({ text: "Clear form", title: "Are you sure?" })
     .then(function () {
@@ -14,4 +19,12 @@ function clear() {
       $$("form").clearValidation();
       $$("datatable").unselectAll();
     });
+}
+
+const asc = () => {
+  $$("list_user").sort("#name#", "asc")
+}
+
+const desc = () => {
+$$("list_user").sort("#name#", "desc")
 }

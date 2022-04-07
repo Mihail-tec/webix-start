@@ -1,22 +1,39 @@
 .text_decor {
-  color: green;
-  background: #d6d2d2;
-  text-decoration: none;
-}
+    color: green;
+    background: #d6d2d2;
+    text-decoration: none;
+  }
+  
+  .colorBack .webix_view{
+      background-color: #d6d2d2;
+  }
+  .colorBack .webix_list_item{
+      border-color: transparent;
+  }
+  
+  .webix_clean .webix_template {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .centerText {
+    text-align: center;
+  }
 
-.colorBack .webix_view{
-    background-color: #d6d2d2;
-}
-.colorBack .webix_list_item{
-    border-color: transparent;
-}
+  .myhover{
+    background: #e9edf3;
+  }
 
-.webix_clean .webix_template {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
+  .rank{
+    background-color: #e9edf3;
+  }
+  
+  .webix_list_item .webix_icon {
+    float: right;
+  }
 
-.centerText {
-  text-align: center;
-}
+  .first_five .webix_list_item:nth-child(-n+5) {
+    background: #393c3d7a;
+    color: white;
+  }
