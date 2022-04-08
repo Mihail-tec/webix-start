@@ -12,12 +12,6 @@
       border-color: transparent;
   }
   
-  .webix_clean .webix_template {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  
   .centerText {
     text-align: center;
   }

@@ -34,7 +34,8 @@ const form =  {
         cols: [
           {
             view: "button",
-            value: "Save",
+            value: "Add new",
+            id:"save",
             css: "webix_primary",
             click: save,
           },
@@ -49,6 +50,11 @@ const form =  {
       },
       {},
     ],
+    on:{
+      onValues: () => {
+        $$("save").setValue("Save")
+      }
+    },
     rules: {
       title: webix.rules.isNotEmpty,
       year: function (value) {
