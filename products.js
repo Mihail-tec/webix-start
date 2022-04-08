@@ -1,7 +1,7 @@
 const products = {
   view: "treetable",
   id:"treetable",
-  select: "row",
+  select: "cell",
   url: "data/products.js",
   columns: [
     { id: "id", header: "id",width: 80 },

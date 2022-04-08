@@ -34,14 +34,14 @@ const form =  {
         cols: [
           {
             view: "button",
-            value: "add new",
+            value: "Save",
             css: "webix_primary",
             click: save,
           },
           { width: 50 },
           {
             view: "button",
-            value: "clear",
+            value: "Clear",
             css: "webix_secondary",
             click: clear,
           },

@@ -25,9 +25,9 @@ const listUser = {
       url: "data/users.js",
       css: "first_five",
       template:
-        "#name# from #country# <span class='webix_icon wxi-close'></span> ",
+        "#name# from #country# <span class='webix_icon wxi-close remove right_position'></span> ",
       onClick: {
-        webix_icon(e, id) {
+        remove(e, id) {
           this.remove(id);
           return false;
         },

@@ -2,6 +2,7 @@
     color: green;
     background: #d6d2d2;
     text-decoration: none;
+    text-align: center;
   }
   
   .colorBack .webix_view{
@@ -29,7 +30,7 @@
     background-color: #e9edf3;
   }
   
-  .webix_list_item .webix_icon {
+  .right_position {
     float: right;
   }
 

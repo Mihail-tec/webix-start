@@ -16,7 +16,7 @@ webix.ready(function () {
                 id: "dashboard",
                 cols: [datatable, form],
               },
-              {id:"users",  rows:[listUser, ]},
+              {id:"users", ...listUser},
               {id:"products", rows:[products, ]},
               {id:"location", template: "location"}
             ],
