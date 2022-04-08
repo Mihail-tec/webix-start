@@ -24,10 +24,7 @@ const clear = () => {
   webix
     .confirm({ text: "Clear form", title: "Are you sure?" })
     .then(function () {
-      $$("form").clear();
-      $$("form").clearValidation();
-      $$("datatable").unselectAll();
-      $$("save").setValue("Add new");
+      clearInside();
     });
 };
 
