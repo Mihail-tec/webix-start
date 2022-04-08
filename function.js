@@ -27,6 +27,7 @@ const clear = () => {
       $$("form").clear();
       $$("form").clearValidation();
       $$("datatable").unselectAll();
+      $$("save").setValue("Add new");
     });
 };
 
