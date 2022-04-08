@@ -10,7 +10,7 @@ const datatable = {
       {id:"year", header:["Year" , {content:"textFilter"}], sort:"int", width: 100},
       {id:"votes", header:["Votes", {content:"textFilter"}], sort:"string", width: 100},
       {id:"rating", header:[ "Rating", {content:"textFilter"}], sort:"text", width: 100},
-      { template:"<span class='webix_icon wxi-trash delete_icon'></span>", width:"80"},
+      { template:"<span class='webix_icon wxi-trash delete_icon'></span>", width:80},
     ],
     onClick: {
       delete_icon(e, id){
@@ -20,7 +20,7 @@ const datatable = {
     },
     on:{
       onAfterSelect(id){
-          const values = $$("datatable").getItem(id);
+          const values = this.getItem(id);
           $$("form").setValues(values)
       }
   }

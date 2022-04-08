@@ -2,8 +2,7 @@ const save = () => {
   const form = $$("form");
   const datatable = $$("datatable");
   const item_data = form.getValues();
-  const save = $$("save");
-  if ($$("form").validate()) {
+  if (form.validate()) {
     if (item_data.id) {
       datatable.updateItem(item_data.id, item_data);
     } else {

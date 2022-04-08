@@ -7,7 +7,7 @@ const listUser = {
           id:"list_input",
           on:{
               onTimedKeyPress: function() {
-                const value = $$("list_input").getValue().toLowerCase();
+                const value = this.getValue().toLowerCase();
                 $$("list_user").filter(function(obj){
                   return obj.name.toLowerCase().includes(value);
                 })

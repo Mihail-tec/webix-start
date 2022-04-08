@@ -11,7 +11,7 @@ const products = {
       fillspace: true,
       template: "{common.treetable()} #title#",
     },
-    { id: "price", header: "Price", width: 200 },
+    { id: "price", header: "Price", fillspace: true },
   ],
   ready: function(){ 
       $$("treetable").openAll()
