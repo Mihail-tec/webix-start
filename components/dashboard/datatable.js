@@ -68,7 +68,7 @@ const datatable = {
   on: {
     onAfterSelect(id) {
       const values = this.getItem(id);
-      $$("form").setValues(values);
+      $$("save").setValue("Save")
     },
   },
 };

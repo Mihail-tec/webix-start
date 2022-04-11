@@ -32,7 +32,7 @@ webix.ready(function () {
     {
       columnId: "year",
       compare: function (value, filter) {
-        let year = new Date().getFullYear();
+        const year = new Date().getFullYear();
         switch (filter) {
           case "old":
             return value <= 1970;
@@ -47,10 +47,10 @@ webix.ready(function () {
     },
     {
       getValue: function (node) {
-        return node?.getValue();
+        return node.getValue();
       },
       setValue: function (node, value) {
-        node?.setValue(value);
+        node.setValue(value);
       },
     }
   );
