@@ -1,11 +1,3 @@
-webix.protoUI(
-  {
-    name: "editlist",
-  },
-  webix.EditAbility,
-  webix.ui.list
-);
-
 const listUser = {
   rows: [
     toolbarUserList,

@@ -65,9 +65,4 @@ const datatable = {
       return false;
     },
   },
-  on: {
-    onAfterSelect() {
-      $$("save").setValue("Save")
-    },
-  },
 };

@@ -1,5 +1,12 @@
 webix.ready(function () {
   webix.ui(popupConfig);
+  webix.protoUI(
+    {
+      name: "editlist",
+    },
+    webix.EditAbility,
+    webix.ui.list
+  );
   webix.ui({
     rows: [
       toolbar,

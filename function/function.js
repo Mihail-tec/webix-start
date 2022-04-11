@@ -11,7 +11,7 @@ const clearInside = () => {
   $$("form").clear();
   $$("form").clearValidation();
   $$("datatable").unselectAll();
-  $$("save").setValue("Add new");
+  $$("save").setValue("Save");
 };
 
 const clear = () => {
