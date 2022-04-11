@@ -17,10 +17,11 @@ const products = {
   ],
   rules: {
     title: (value) => {
-      if (!webix.rules.isNotEmpty(value)) {
+      const checkTitle = webix.rules.isNotEmpty(value);
+      if (!checkTitle) {
         webix.message("field title must be fill");
       }
-      return webix.rules.isNotEmpty(value);
+      return checkTitle;
     },
     price: (value, data) => {
       if (data?.$count !== 0 ) {

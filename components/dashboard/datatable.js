@@ -66,8 +66,7 @@ const datatable = {
     },
   },
   on: {
-    onAfterSelect(id) {
-      const values = this.getItem(id);
+    onAfterSelect() {
       $$("save").setValue("Save")
     },
   },
