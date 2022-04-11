@@ -14,11 +14,11 @@ webix.ready(function () {
             cells: [
               {
                 id: "dashboard",
-                cols: [datatable, form],
+                cols: [{ rows: [dashBoard, datatable] }, form],
               },
-              {id:"users", ...listUser},
-              {id:"products", rows:[products, ]},
-              {id:"location", template: "location"}
+              { id: "users", ...listUser },
+              { id: "products", rows: [products] },
+              { id: "location", template: "location" },
             ],
           },
         ],
@@ -26,4 +26,32 @@ webix.ready(function () {
       footer,
     ],
   });
+
+  $$("datatable").registerFilter(
+    $$("filterYear"),
+    {
+      columnId: "year",
+      compare: function (value, filter) {
+        let year = new Date().getFullYear();
+        switch (filter) {
+          case "old":
+            return value <= 1970;
+          case "modern":
+            return value >= 2010;
+          case "new":
+            return value == year;
+          default:
+            return true;
+        }
+      },
+    },
+    {
+      getValue: function (node) {
+        return node?.getValue();
+      },
+      setValue: function (node, value) {
+        node?.setValue(value);
+      },
+    }
+  );
 });

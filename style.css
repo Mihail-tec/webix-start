@@ -1,34 +1,35 @@
 .text_decor {
-    color: green;
-    background: #d6d2d2;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  .colorBack .webix_view{
-      background-color: #d6d2d2;
-  }
-  .colorBack .webix_list_item{
-      border-color: transparent;
-  }
-  
-  .centerText {
-    text-align: center;
-  }
+  color: green;
+  background: #d6d2d2;
+  text-decoration: none;
+  text-align: center;
+}
 
-  .myhover{
-    background: #e9edf3;
-  }
+.colorBack .webix_view {
+  background-color: #d6d2d2;
+}
 
-  .rank{
-    background-color: #e9edf3;
-  }
-  
-  .right_position {
-    float: right;
-  }
+.colorBack .webix_list_item {
+  border-color: transparent;
+}
 
-  .first_five .webix_list_item:nth-child(-n+5) {
-    background: #393c3d7a;
-    color: white;
-  }
+.centerText {
+  text-align: center;
+}
+
+.myhover {
+  background: #e9edf3;
+}
+
+.rank {
+  background-color: #e9edf3;
+}
+
+.right_position {
+  float: right;
+}
+
+.teenager {
+  background: yellow;
+  color: black;
+}
