@@ -40,7 +40,7 @@ webix.ready(function () {
     {
       columnId: "year",
       compare: function (value, filter) {
-        let year = new Date().getFullYear();
+        const year = new Date().getFullYear();
         switch (filter) {
           case "old":
             return value <= 1970;
@@ -62,4 +62,15 @@ webix.ready(function () {
       },
     }
   );
+  
+  $$("list_user").sync(usersCollection)
+  $$("chart").sync(usersCollection, function () {
+    this.group({
+      by: "country",
+      map: {
+        country: ["country", "count"],
+      },
+    });
+    this.sort("country", "desc");
+  });
 });

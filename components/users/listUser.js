@@ -21,17 +21,6 @@ const listUser = {
       rules: {
         name: webix.rules.isNotEmpty,
       },
-      ready: () => {
-        $$("chart").sync($$("list_user"), function () {
-          this.group({
-            by: "country",
-            map: {
-              country: ["country", "count"],
-            },
-          });
-          this.sort("country", "desc");
-        });
-      },
       onClick: {
         remove(e, id) {
           this.remove(id);

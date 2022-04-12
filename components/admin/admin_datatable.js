@@ -19,6 +19,9 @@ const adminDatatable = {
       width: 50,
     },
   ],
+  ready: () => {
+    $$("adminForm").bind($$("adminDatatable"));
+  },
   onClick: {
     remove: (e, id) => {
       if (categoriesCollection.count() < 2) {

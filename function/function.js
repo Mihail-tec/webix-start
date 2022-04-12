@@ -23,11 +23,11 @@ const clear = () => {
 };
 
 const asc = () => {
-  usersCollection.sort("#name#", "asc");
+  $$("list_user").sort("#name#", "asc");
 };
 
 const desc = () => {
-  usersCollection.sort("#name#", "desc");
+  $$("list_user").sort("#name#", "desc");
 };
 
 const users = [
@@ -42,7 +42,7 @@ const getRandom = (users) => {
 };
 
 const addNewUser = () => {
-  $$("list_user").add(webix.clone(getRandom(users)));
+  usersCollection.add(webix.clone(getRandom(users)));
 };
 
 const random = (min, max) => {
