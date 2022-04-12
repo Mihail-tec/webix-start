@@ -1,5 +1,4 @@
 webix.ready(function () {
-  webix.ui(popupConfig);
   webix.protoUI(
     {
       name: "editlist",
@@ -7,6 +6,8 @@ webix.ready(function () {
     webix.EditAbility,
     webix.ui.list
   );
+  
+  webix.ui(popupConfig);
   webix.ui({
     rows: [
       toolbar,
@@ -25,7 +26,7 @@ webix.ready(function () {
               },
               { id: "users", ...listUser },
               { id: "products", rows: [products] },
-              { id: "location", template: "location" },
+              { id: "admin", rows: [adminForm, adminDatatable]},
             ],
           },
         ],
@@ -54,11 +55,22 @@ webix.ready(function () {
     },
     {
       getValue: function (node) {
-        return node.getValue();
+        return node?.getValue();
       },
       setValue: function (node, value) {
-        node.setValue(value);
+        node?.setValue(value);
       },
     }
   );
+  $$("adminDatatable").sync(categoriesCollection)
+  $$("list_user").sync(usersCollection)
+  $$("chart").sync(usersCollection, function () {
+    this.group({
+      by: "country",
+      map: {
+        country: ["country", "count"],
+      },
+    });
+    this.sort("country", "desc");
+  });
 });

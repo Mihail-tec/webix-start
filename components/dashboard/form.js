@@ -31,10 +31,17 @@ const form = {
       invalidMessage: "Votes must be less than 100000",
     },
     {
+      view: "richselect",
+      id: "richselectCategories",
+      label: "Category",
+      name: "categoryId",
+      options: categoriesCollection,
+    },
+    {
       cols: [
         {
           view: "button",
-          value: "save",
+          value: "Save",
           id: "save",
           css: "webix_primary",
           click: save,
@@ -59,5 +66,6 @@ const form = {
     votes: function (value) {
       return value <= 100000 && value > 0;
     },
+    categoryId: webix.rules.isNotEmpty,
   },
 };

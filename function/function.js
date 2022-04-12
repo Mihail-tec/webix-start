@@ -3,7 +3,7 @@ const save = () => {
   if (form.isDirty()) {
     if (!form.validate()) return false;
     form.save();
-  } 
+  }
   clearInside();
 };
 
@@ -31,7 +31,7 @@ const desc = () => {
 };
 
 const users = [
-  {  name: "Kiril Tugoy", age: 42, country: "China" },
+  { name: "Kiril Tugoy", age: 42, country: "China" },
   { name: "Dima Otbity", age: 80, country: "Litva" },
   { name: "Nazar Hockey", age: 50, country: "Israile" },
   { name: "Anton Tolsty", age: 25, country: "USA" },
@@ -42,7 +42,7 @@ const getRandom = (users) => {
 };
 
 const addNewUser = () => {
-  $$("list_user").add(webix.clone(getRandom(users)));
+  usersCollection.add(webix.clone(getRandom(users)));
 };
 
 const random = (min, max) => {
