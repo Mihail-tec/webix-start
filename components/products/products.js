@@ -1,19 +1,19 @@
 const products = {
   view: "treetable",
-  id: "treetable",
+  id:"treetable",
   select: "cell",
-  editable: true,
+  editable:true,
   url: "data/products.js",
   columns: [
-    { id: "id", header: "id", width: 80 },
+    { id: "id", header: "id",width: 80 },
     {
       id: "title",
       header: "Title",
       fillspace: true,
-      editor: "text",
+      editor:"text",
       template: "{common.treetable()} #title#",
     },
-    { id: "price", header: "Price", fillspace: true, editor: "text" },
+    { id: "price", header: "Price", fillspace: true, editor:"text" },
   ],
   rules: {
     title: (value) => {
@@ -32,7 +32,7 @@ const products = {
       return webix.rules.isNumber(value);
     },
   },
-  ready: function () {
-    this.openAll();
-  },
+  ready: function(){ 
+      this.openAll()
+    }
 };

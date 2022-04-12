@@ -1,5 +1,4 @@
 webix.ready(function () {
-  webix.ui(popupConfig);
   webix.protoUI(
     {
       name: "editlist",
@@ -7,6 +6,8 @@ webix.ready(function () {
     webix.EditAbility,
     webix.ui.list
   );
+  
+  webix.ui(popupConfig);
   webix.ui({
     rows: [
       toolbar,
@@ -25,7 +26,7 @@ webix.ready(function () {
               },
               { id: "users", ...listUser },
               { id: "products", rows: [products] },
-              { id: "location", template: "location" },
+              { id: "admin", rows: [adminForm, adminDatatable]},
             ],
           },
         ],
@@ -39,7 +40,7 @@ webix.ready(function () {
     {
       columnId: "year",
       compare: function (value, filter) {
-        const year = new Date().getFullYear();
+        let year = new Date().getFullYear();
         switch (filter) {
           case "old":
             return value <= 1970;
@@ -54,10 +55,10 @@ webix.ready(function () {
     },
     {
       getValue: function (node) {
-        return node.getValue();
+        return node?.getValue();
       },
       setValue: function (node, value) {
-        node.setValue(value);
+        node?.setValue(value);
       },
     }
   );

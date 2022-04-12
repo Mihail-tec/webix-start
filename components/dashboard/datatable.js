@@ -1,7 +1,3 @@
-const categories = new webix.DataCollection({
-  url: "data/categories.js",
-});
-
 const datatable = {
   view: "datatable",
   id: "datatable",
@@ -18,14 +14,14 @@ const datatable = {
     },
     {
       id: "categoryId",
-      collection: categories,
+      collection: categoriesCollection ,
       header: ["Category", { content: "selectFilter" }],
     },
     { id: "year", header: "Year", sort: "int", width: 100 },
     {
       id: "votes",
       header: ["Votes", { content: "textFilter" }],
-      sort: "int",
+      sort: "string",
       width: 100,
     },
     {
@@ -41,7 +37,7 @@ const datatable = {
   ],
   scheme: {
     $init: (obj) => {
-      obj.categoryId = random(1, 4);
+      obj.categoryId = random(1, categoriesCollection.count() );
       obj.votes = webix.Number.parse(obj.votes, {
         decimalSize: 2,
         groupSize: 3,
@@ -58,6 +54,7 @@ const datatable = {
   },
   ready: () => {
     $$("form").bind($$("datatable"));
+    
   },
   onClick: {
     delete_icon(e, id) {

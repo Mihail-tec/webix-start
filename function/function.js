@@ -3,7 +3,7 @@ const save = () => {
   if (form.isDirty()) {
     if (!form.validate()) return false;
     form.save();
-  } 
+  }
   clearInside();
 };
 
@@ -23,15 +23,15 @@ const clear = () => {
 };
 
 const asc = () => {
-  $$("list_user").sort("#name#", "asc");
+  usersCollection.sort("#name#", "asc");
 };
 
 const desc = () => {
-  $$("list_user").sort("#name#", "desc");
+  usersCollection.sort("#name#", "desc");
 };
 
 const users = [
-  {  name: "Kiril Tugoy", age: 42, country: "China" },
+  { name: "Kiril Tugoy", age: 42, country: "China" },
   { name: "Dima Otbity", age: 80, country: "Litva" },
   { name: "Nazar Hockey", age: 50, country: "Israile" },
   { name: "Anton Tolsty", age: 25, country: "USA" },

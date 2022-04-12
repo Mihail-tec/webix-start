@@ -5,7 +5,7 @@ const listUser = {
       view: "editlist",
       id: "list_user",
       select: true,
-      url: "data/users.js",
+      data: usersCollection,
       editable: true,
       editor: "text",
       editValue: "name",
@@ -22,7 +22,7 @@ const listUser = {
         name: webix.rules.isNotEmpty,
       },
       ready: () => {
-        $$("chart").sync($$("list_user"), function() {
+        $$("chart").sync($$("list_user"), function () {
           this.group({
             by: "country",
             map: {
@@ -39,6 +39,6 @@ const listUser = {
         },
       },
     },
-    chart
+    chart,
   ],
 };
