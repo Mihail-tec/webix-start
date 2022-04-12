@@ -2,7 +2,6 @@ const chart = {
   view: "chart",
   id: "chart",
   type: "bar",
-  data: usersCollection,
   value: "#country#",
   label: "#country#",
   tooltip: {

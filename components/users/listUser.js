@@ -5,7 +5,6 @@ const listUser = {
       view: "editlist",
       id: "list_user",
       select: true,
-      data: usersCollection,
       editable: true,
       editor: "text",
       editValue: "name",

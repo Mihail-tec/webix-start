@@ -3,7 +3,6 @@ const adminDatatable = {
   id: "adminDatatable",
   select: true,
   editable: true,
-  data: categoriesCollection,
   columns: [
     { id: "id", header: "", width: 50 },
     {

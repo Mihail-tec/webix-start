@@ -62,7 +62,7 @@ webix.ready(function () {
       },
     }
   );
-  
+  $$("adminDatatable").sync(categoriesCollection)
   $$("list_user").sync(usersCollection)
   $$("chart").sync(usersCollection, function () {
     this.group({
