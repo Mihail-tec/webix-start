@@ -18,9 +18,6 @@ const adminDatatable = {
       width: 50,
     },
   ],
-  ready: () => {
-    $$("adminForm").bind($$("adminDatatable"));
-  },
   onClick: {
     remove: (e, id) => {
       if (categoriesCollection.count() < 2) {
@@ -28,7 +25,6 @@ const adminDatatable = {
       }
       webix.confirm("Are you sure you want to delete?").then(() => {
         categoriesCollection.remove(id);
-        $$("adminForm").clear();
       });
     },
   },
